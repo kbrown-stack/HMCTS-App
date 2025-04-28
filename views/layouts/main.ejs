@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | HMCTS Task Manager</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+  
+  <div class="container">
+    <!-- Flash messages -->
+    <% if(typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
+      <div class="alert alert-success">
+        <%= success_msg %>
+      </div>
+    <% } %>
+    
+    <% if(typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= error_msg %>
+      </div>
+    <% } %>
+    
+    <% if(typeof error !== 'undefined') { %>
+      <div class="alert alert-danger">
+        <%= error %>
+      </div>
+    <% } %>
+    
+    <%- body %>
+  </div>
+  
+  <%- include('../partials/footer') %>
+  
+  <script src="/js/main.js"></script>
+</body>
+</html>

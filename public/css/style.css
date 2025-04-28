@@ -1,0 +1,326 @@
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2a4365;
+    --accent-color: #3182ce;
+    --text-color: #2d3748;
+    --light-bg: #f7fafc;
+    --light-border: #e2e8f0;
+    
+    --pending-color: #ed8936;
+    --in-progress-color: #3182ce;
+    --completed-color: #48bb78;
+    
+    --danger-color: #e53e3e;
+    --warning-color: #d69e2e;
+    --info-color: #4299e1;
+    --success-color: #48bb78;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  .main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .main-nav ul li {
+    margin-left: 20px;
+  }
+  
+  .main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .main-nav ul li a:hover,
+  .main-nav ul li a.active {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Footer Styles */
+  .main-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  /* Page Header */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-border);
+  }
+  
+  .header-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Task Columns */
+  .task-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .task-column {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+  }
+  
+  .task-column h3 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-border);
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Task Cards */
+  .task-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-left: 5px solid var(--light-border);
+  }
+  
+  .task-card.status-pending {
+    border-left-color: var(--pending-color);
+  }
+  
+  .task-card.status-in-progress {
+    border-left-color: var(--in-progress-color);
+  }
+  
+  .task-card.status-completed {
+    border-left-color: var(--completed-color);
+  }
+  
+  .task-title {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .task-description {
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .task-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #718096;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .no-tasks {
+    text-align: center;
+    padding: 20px;
+    color: #a0aec0;
+    font-style: italic;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+  }
+  
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .btn-secondary {
+    background-color: #718096;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #4a5568;
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .btn-info {
+    background-color: var(--info-color);
+    color: white;
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  /* Form Styles */
+  .form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px;
+    border: 1px solid var(--light-border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Task Status Styles */
+  .task-status {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .task-status.pending {
+    background-color: #feebc8;
+    color: #9c4221;
+  }
+  
+  .task-status.in-progress {
+    background-color: #bee3f8;
+    color: #2c5282;
+  }
+  
+  .task-status.completed {
+    background-color: #c6f6d5;
+    color: #276749;
+  }
+  
+  /* Task Details */
+  .task-detail-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 5px solid var(--light-border);
+  }
+  
+  .task-detail-card.status-pending {
+    border-left-color: var(--pending-color);
+  }
+  
+  .task-detail-card.status-in-progress {
+    border-left-color: var(--in-progress-color);
+  }
