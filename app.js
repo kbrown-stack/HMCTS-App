@@ -1,5 +1,7 @@
+// This file shows 
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -7,7 +9,7 @@ const expressLayouts = require('express-ejs-layouts');
 const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4002;
 
 // EJS setup
 app.set('view engine', 'ejs');
@@ -36,11 +38,11 @@ app.use((req, res, next) => {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/hmcts_task_manager', {
+mongoose.connect(process.env.MONGO_URI, {
   // useNewUrlParser: true,
   // useUnifiedTopology: true
 })
-.then(() => console.log('Connected to MongoDB'))
+.then(() => console.log('Connected to MongoDB Atlas'))
 .catch(err => console.error('Could not connect to MongoDB:', err));
 
 // Routes

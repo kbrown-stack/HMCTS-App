@@ -324,3 +324,84 @@
   .task-detail-card.status-in-progress {
     border-left-color: var(--in-progress-color);
   }
+
+  .task-detail-card.status-completed {
+    border-left-color: var(--completed-color);
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .task-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .task-description h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+  }
+  
+  .task-meta {
+    margin: 1.5rem 0;
+  }
+  
+  .meta-item {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  
+  .meta-item strong {
+    width: 100px;
+    display: inline-block;
+  }
+  
+  /* Alerts */
+  .alert {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .alert-success {
+    background-color: #c6f6d5;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+  }
+  
+  .alert-danger {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+  }
+  
+  /* Inline form */
+  .inline-form {
+    display: inline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .task-columns {
+      grid-template-columns: 1fr;
+    }
+    
+    .page-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .header-actions {
+      width: 100%;
+    }
+    
+    .form-container {
+      padding: 1rem;
+    }
+  }
