@@ -1,5 +1,5 @@
 HMCTS Task Manager App
-This project was built as part of the HMCTS Developer Challenge. It is a simple task management web application that demonstrates full-stack development skills using Node.js, Express, MongoDB, and EJS.
+This project was built as part of the (https://github.com/kbrown-stack/HMCTS-App). It is a simple task management web application that demonstrates full-stack development skills using Node.js, Express, MongoDB, and EJS.
 
 🚀 Features
 Create, view, update, and delete tasks (CRUD operations)
